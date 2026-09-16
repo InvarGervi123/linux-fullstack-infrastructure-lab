@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Full Stack App</title>
+</head>
+<body>
+
+    <h1>My Full Stack App 🚀</h1>
+
+    <input id="name" placeholder="Enter your name">
+    <button onclick="addUser()">Add User</button>
+
+    <h2>Users</h2>
+    <ul id="users"></ul>
+
+    <script>
+        async function loadUsers() {
+            const response = await fetch('/users');
+            const users = await response.json();
+
+            const list = document.getElementById('users');
+            list.innerHTML = '';
+
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = user.name;
+                list.appendChild(li);
+            });
+        }
+
+        async function addUser() {
+            const name = document.getElementById('name').value;
+
+            await fetch('/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name })
+            });
+
+            document.getElementById('name').value = '';
+            loadUsers();
+        }
+
+        loadUsers();
+    </script>
+
+</body>
+</html>
