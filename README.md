@@ -3,7 +3,7 @@
 A hands-on full-stack and infrastructure lab running on Ubuntu Server.
 
 
-<img width="1920" height="1080" alt="13e644e7-879f-4815-bc8f-39f2b8db2c39" src="https://github.com/user-attachments/assets/dae79381-9252-4714-8fd8-be7fedd4c9c2" />
+<img width="1920" height="1080" alt="13e644e7-879f-4815-bc8f-39f2b8db2c39 cend" src="https://github.com/user-attachments/assets/6bb01273-27fd-4cfb-a3f2-8c86dd79b4cc" />
 
 
 ## Architecture
